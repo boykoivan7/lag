@@ -1,7 +1,7 @@
 body {
     margin: 0 auto;
     text-align: center;
-    background: pink;
+    background: #f3f3f3;
 }
 hr {
     border: 0;
@@ -9,7 +9,7 @@ hr {
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
-header {
+.container{
     max-width: 1170px;
     margin: 0 auto;
 }
@@ -25,6 +25,10 @@ header {
 .calendar {
     float: right;
 }
+.calendar a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
 .event {
     float: left;
 }
@@ -35,4 +39,36 @@ header {
     content: "";
     display: table;
     clear: both;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline-block;
+}
+li a {
+    text-decoration: none;
+    display: block;
+    width: 75px;
+}
+li a::first-letter {
+    text-transform: uppercase;
+}
+li img {
+    height: 30px;
+    width: 30px;
+}
+nav {
+    float: left;
+}
+.social {
+    float: right;
+}
+.banner1 {
+    height: 600px;
+    background-image: url(../img/slider4.jpg);
+    background-size: cover;
+    background-position: center bottom;
 }
