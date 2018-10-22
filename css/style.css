@@ -15,19 +15,27 @@ hr {
 }
 .logo {
     float: left;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
+    margin: 10px 0 0 10px;
 }
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
 }
 .calendar {
     float: right;
+    margin-top: 35px;
 }
 .calendar a {
     text-transform: uppercase;
     text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 .event {
     float: left;
@@ -35,6 +43,7 @@ hr {
 .metodical {
     float: right;
 }
+
 .clearfix::after {
     content: "";
     display: table;
@@ -52,6 +61,7 @@ li a {
     text-decoration: none;
     display: block;
     width: 75px;
+    color: #333;
 }
 li a::first-letter {
     text-transform: uppercase;
