@@ -36,7 +36,7 @@ hr {
     border: 1px solid #333;
     border-radius: 5px;
     margin-right: 10px;
-}
+ }
 .event {
     float: left;
 }
@@ -60,15 +60,16 @@ li {
 li a {
     text-decoration: none;
     display: block;
-    width: 75px;
     color: #333;
+    margin-right: 20px;
 }
 li a::first-letter {
     text-transform: uppercase;
 }
 li img {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
 }
 nav {
     float: left;
@@ -82,3 +83,27 @@ nav {
     background-size: cover;
     background-position: center bottom;
 }
+
+/* news */
+.news h1 {
+    text-transform: uppercase;
+}
+.flexboxnews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.lastnews {
+    width: 22%;
+}
+.lastnews img {
+    width: 100%;
+}
+.newsdate img {
+    height: 35px;
+    width: 35px;
+    float: left;
+}
+
+
+
