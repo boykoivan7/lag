@@ -104,6 +104,22 @@ nav {
     width: 35px;
     float: left;
 }
+/* school and pupils history */
+.history {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.history h1 {
+    text-transform: uppercase;
+}
+.aboutschool, .aboutpupils {
+    width: 40%;
+}
+.facts img {
+    width: 40px;
+    float: left;
+}
 
 
 
