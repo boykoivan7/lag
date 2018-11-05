@@ -122,6 +122,10 @@ li a::first-letter {
 .lastnews img {
     width: 100%;
 }
+.lastnews a {
+    text-decoration: none;
+    color: #000;
+}
 .newsdate i {
     font-size: 25px;
     color: #878787;
@@ -133,6 +137,10 @@ li a::first-letter {
 .newsdate {
     display: flex;
     justify-content: space-evenly;
+    padding-top: 10px;
+}
+.newsname {
+    padding: 10px 0 10px 0;
 }
 
 /* school and pupils history */
@@ -154,12 +162,10 @@ li a::first-letter {
     top: 0;
 }
 .history {
-    height: 400px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
-    align-items: center;
 }
 .history h2 {
     text-transform: uppercase;
