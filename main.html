@@ -14,11 +14,11 @@
    <body>
       <header>
          <div class="container">
-            <div class="clearfix">
+            <div class="flex-logo-calendar">
                <div class="logo">
-                  <img src="img/p.jpg" alt="">
+                  <a href=""><img src="img/p.jpg" alt=""></a>
                </div>
-               <div class="clearfix">
+               <div class="clearfix calendar-none">
                   <div class="calendar">
                      <div class="event">
                         <a href="">календар подій</a>
@@ -28,11 +28,12 @@
                      </div>
                   </div>
                </div>
+               <button id="btn-menu"><hr><hr><hr></button>
             </div>
-            <hr>
+            <hr class="hr-head">
             <div class="navigate">
-               <div class="flex-nav">
-                  <nav>
+               <div class="flex-nav" id="menu-hidden">
+                    <nav id="menu">
                      <ul>
                         <li><a href="">головна</a></li>
                         <li><a href="">про школу</a></li>
@@ -53,12 +54,13 @@
                   </div>
                </div>
             </div>
+        
          </div>
       </header>
       <main>
          <div class="banner1"> 
              <div class="overflow">
-             <img src="img/slider16.jpg" alt="Slider">
+             <img src="img/slider13.jpg" alt="Slider">
             </div>
          </div>
          <div class="container">
@@ -70,7 +72,9 @@
                <h2>новини</h2>
                <div class="flexboxnews">
                   <div class="lastnews">
+                      <div class="img-container">
                      <a href=""><img src="img/n_konkurssuperhero.jpg" alt=""></a>
+                    </div>
                      <div class="newsinfo">
                         <div class="newsdate">
                            <i class="fas fa-calendar-alt"></i>
@@ -82,7 +86,9 @@
                      </div>
                   </div>
                   <div class="lastnews">
-                        <a href=""><img src="img/n_konkurssuperhero.jpg" alt=""></a>
+                        <div class="img-container">
+                                <a href=""><img src="img/n_konkurssuperhero.jpg" alt=""></a>
+                               </div>
                         <div class="newsinfo">
                            <div class="newsdate">
                               <i class="fas fa-calendar-alt"></i>
@@ -94,7 +100,9 @@
                         </div>
                      </div>
                      <div class="lastnews">
-                            <a href=""><img src="img/n_konkurssuperhero.jpg" alt=""></a>
+                            <div class="img-container">
+                                    <a href=""><img src="img/n_konkurssuperhero.jpg" alt=""></a>
+                                   </div>
                             <div class="newsinfo">
                                <div class="newsdate">
                                   <i class="fas fa-calendar-alt"></i>
@@ -106,7 +114,9 @@
                             </div>
                          </div>
                          <div class="lastnews">
-                                <a href=""><img src="img/n_konkurssuperhero.jpg" alt=""></a>
+                                <div class="img-container">
+                                        <a href=""><img src="img/n_konkurssuperhero.jpg" alt=""></a>
+                                       </div>
                                 <div class="newsinfo">
                                    <div class="newsdate">
                                       <i class="fas fa-calendar-alt"></i>
@@ -350,12 +360,14 @@
                     <li><a href="">проекти</a></li>
                     <li><a href="">контакти</a></li>
                </ul>
-            </div>
-            <hr>
+               </div>
+            <hr class="hr-foot">
             <div class="developers">
                 <p>@2018 Matviiv Roman & Boyko Ivan</p>
             </div>
          </div>
       </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="js/responsiveMenuBtn.js"></script>
    </body>
 </html>

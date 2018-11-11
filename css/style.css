@@ -1,33 +1,35 @@
 body {
-    margin: 0 auto;
-    text-align: center;
-    background: #f3f3f3;
-    font-family: 'Open Sans', sans-serif;
-}
-hr {
+        margin: 0 auto;
+        text-align: center;
+        background: #f3f3f3;
+        font-family: 'Open Sans', sans-serif;
+    }
+.hr-head, .hr-foot {
     border: 0;
     height: 1px;
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+header {
+    padding: 10px 0 10px 0;
 }
 .container{
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 10px 0 10px;
 }
+.flex-logo-calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .logo {
-    float: left;
     width: 70px;
     height: 70px;
-    margin: 10px 0 0 10px;
 }
 .logo img {
     width: 100%;
     height: 100%;
-}
-.calendar {
-    float: right;
-    margin-top: 35px;
 }
 .calendar a {
     text-transform: uppercase;
@@ -59,6 +61,16 @@ hr {
     display: table;
     clear: both;
 }
+#btn-menu {
+    display: none;
+}
+#menu {
+    width: 85%;
+    margin: 0;
+}
+#menu ul {
+    text-align: left;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -67,7 +79,7 @@ ul {
 li {
     display: inline-block;
 }
-header li a {
+#menu li a {
     text-decoration: none;
     display: block;
     color: #000;
@@ -87,9 +99,19 @@ li a::first-letter {
     align-items: center;
     margin-bottom: 10px;
 }
+.mainmenubtn {
+    display: none;
+}
+.social {
+    width: 15%;
+}
+.social ul {
+    text-align: right;
+}
 .social i {
     color: #9c2910;
     font-size: 40px;
+    margin-left: 10px;
 }
 .banner1 {
     max-height: 500px;
@@ -119,8 +141,23 @@ li a::first-letter {
     width: 22%;
     border: 1px solid silver;
 }
+.lastnews:hover {
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 .lastnews img {
     width: 100%;
+}
+.img-container {
+    overflow: hidden;
+}
+.lastnews img:hover {
+    -webkit-transform: scale(1.2,1.2);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: scale(1.2,1.2);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
 }
 .lastnews a {
     text-decoration: none;
@@ -170,11 +207,13 @@ li a::first-letter {
 .history h2 {
     text-transform: uppercase;
     color: #fff;
-    margin-top: 0; 
+    margin-top: 0;
+    font-weight: bold; 
 }
 .history p {
     color: #fff;
     text-align: justify;
+    font-weight: bold; 
 }
 .aboutschool, .aboutpupils {
     width: 40%;
@@ -336,3 +375,82 @@ footer li a {
     line-height: 30px;
     margin-bottom: 0;
 }
+
+
+/*for phones and laptops  */
+@media screen and (max-width: 992px) {
+    .full-head {
+        display: none;
+    }
+    .mobile-head {
+        display: block;
+    }
+    #btn-menu {
+        display: block;
+        width: 40px;
+        background-color: #9c2910;
+        border: 1px solid #fff;
+        border-radius: 10px;
+    }
+    #btn-menu hr {
+        border: 1px solid #fff;
+    }
+    #btn-menu:hover hr , #btn-menu:hover {
+        border: 1px solid #000;
+    }
+    #btn-menu:active{
+        border: 3px solid #000;
+    }
+    #btn-menu:focus {
+        outline: none;
+    }
+    .calendar-none {
+        display: none;
+    }
+    .hr-head {
+        display: none;
+    }
+    #menu {
+        width: 100%;
+    }
+    #menu-hidden{
+        display: none;
+    }
+    nav li {
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid silver;
+        padding: 10px 0 10px 0;
+    }
+    nav li a:hover {
+        padding-left: 20px;
+    }
+    .social {
+        display: none;
+    }
+    .lastnews, .aboutschool, .aboutpupils, .cooperation, .education {
+        width: 70%;
+    }
+    .newsdate {
+        justify-content: center;
+    }
+    .newsdate p {
+        padding-left: 10px; 
+    }
+    .aboutpupils {
+        padding-top: 30px;
+    }
+    .lastnews {
+        margin-bottom: 20px;
+    }
+    .cooperation-flex, .flex-education {
+        justify-content: space-around;
+    }
+    .cooperation:nth-child(2) {
+        border-left: none;
+        border-right: none;
+    }
+    
+   
+}
+
