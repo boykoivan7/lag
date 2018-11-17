@@ -39,8 +39,8 @@ header {
     margin-right: 0 auto;
     display: block;
 }
-.calendar a:hover {
-    font-weight: bold;
+.event:hover, .metodical:hover {
+    background-color: #8a250e;
 }
 .event {
     float: left;
@@ -114,7 +114,7 @@ li a::first-letter {
     margin-left: 10px;
 }
 .social i:hover {
-    font-weight: bold;
+    color: #8a250e;
 }
 .banner1 {
     max-height: 500px;
@@ -342,9 +342,11 @@ li a::first-letter {
     background-color: #9c2910;
     text-align: center;
     margin: 0 auto;
-    border: 2px solid white;
     border-radius: 10px;
     position: relative;   
+}
+.top:hover {
+    background-color: #8a250e;
 }
 .top a {
     text-decoration: none;
@@ -373,6 +375,10 @@ footer li a {
     margin-right: 20px;
     font-weight: bold;
     line-height: 60px;
+}
+footer li a:hover {
+    font-weight: bold;
+    color: #9c2910;
 }
 .developers p {
     color: #fff;
