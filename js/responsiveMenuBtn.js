@@ -10,20 +10,20 @@
 //     }
 //  });
 
- $(window).resize(function() {
+
+
+ window.addEventListener("resize" , () => {
     if(document.documentElement.clientWidth > 992) {
         document.getElementById("menu-hidden").style.display = "flex";
-    // if(document.getElementById("btn-menu").style.display === "block") {
-    //     document.getElementById("menu-hidden").style.display = "none";
-    // }
-    // else {
-    //     document.getElementById("menu-hidden").style.display = "flex";
-    // }
-}
-else {
+    }
+    else {
     document.getElementById("menu-hidden").style.display = "none";
-}
-  });
+    }
+});
+
+
+
+
   document.getElementById("btn-menu").addEventListener("click" , () => {
     var menuHidden = document.getElementById("menu-hidden").style.display === "flex"; 
     if (menuHidden) {

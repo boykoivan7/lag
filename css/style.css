@@ -1,7 +1,7 @@
 body {
         margin: 0 auto;
         text-align: center;
-        background: #f3f3f3;
+        background: #fff;
         font-family: 'Open Sans', sans-serif;
     }
 .hr-head, .hr-foot {
@@ -71,12 +71,12 @@ header {
 #menu ul {
     text-align: left;
 }
-ul {
+header ul, footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-li {
+header li, footer li {
     display: inline-block;
 }
 #menu li a {
@@ -86,7 +86,7 @@ li {
     margin-right: 20px;
     font-weight: bold;
 }
-li a:hover {
+#menu li a:hover {
     font-weight: bold;
     color: #9c2910;
 }
@@ -112,6 +112,9 @@ li a::first-letter {
     color: #9c2910;
     font-size: 40px;
     margin-left: 10px;
+}
+.social i:hover {
+    font-weight: bold;
 }
 .banner1 {
     max-height: 500px;
@@ -162,6 +165,7 @@ li a::first-letter {
 .lastnews a {
     text-decoration: none;
     color: #000;
+    font-weight: bold;
 }
 .newsdate i {
     font-size: 25px;
@@ -215,7 +219,7 @@ li a::first-letter {
     text-align: justify;
     font-weight: bold; 
 }
-.aboutschool, .aboutpupils {
+.schoolinfo, .pupilsinfo {
     width: 40%;
 }
 .facts i {
@@ -376,6 +380,56 @@ footer li a {
     margin-bottom: 0;
 }
 
+/* 2 page about school */
+.aboutschool h1 {
+    font-size: 40px;
+}
+.aboutschool h1::first-letter {
+    text-transform: uppercase;
+}
+blockquote {
+    max-width: 540px;
+    margin: 0 auto;
+}
+blockquote p{
+    text-align: left;
+}
+blockquote cite p {
+    text-align: right;
+}
+.school-history p, .school-museum p{
+    text-align: justify;
+    text-indent: 2em;
+}
+.school-museum li {
+    text-align: justify;
+}
+.school-museum ol {
+    padding-left: 50px;
+}
+
+
+/* 3 page */
+.side {
+    float: right;
+    width: 20%;
+}
+.open-news {
+    width: 80%;
+}
+.thumbnail {
+    width: 50%;
+}
+.thumbnail img {
+    width: 100%;
+}
+.news-date-creator {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
 
 /*for phones and laptops  */
 @media screen and (max-width: 992px) {
@@ -428,7 +482,7 @@ footer li a {
     .social {
         display: none;
     }
-    .lastnews, .aboutschool, .aboutpupils, .cooperation, .education {
+    .lastnews, .schoolinfo, .pupilsinfo, .cooperation, .education {
         width: 70%;
     }
     .newsdate {
@@ -437,7 +491,7 @@ footer li a {
     .newsdate p {
         padding-left: 10px; 
     }
-    .aboutpupils {
+    .pupilsinfo {
         padding-top: 30px;
     }
     .lastnews {
@@ -450,7 +504,13 @@ footer li a {
         border-left: none;
         border-right: none;
     }
-    
+
+/* 2 page about school */
+
+
+
+/* 3 page */
+
    
 }
 
