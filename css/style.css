@@ -55,7 +55,6 @@ header {
     border-radius: 10px;
     margin-left: 20px;
 }
-
 .clearfix::after {
     content: "";
     display: table;
@@ -413,27 +412,29 @@ blockquote cite p {
 .school-museum ol {
     padding-left: 50px;
 }
-
-
 /* 3 page */
-.side {
+aside {
     float: right;
-    width: 20%;
+    width: 30%;
 }
 .open-news {
-    width: 80%;
+    width: 70%;
+    float: left;
+}
+.open-news h1 {
+    text-transform: uppercase;
 }
 .thumbnail {
-    width: 50%;
+    width: 100%;
 }
 .thumbnail img {
     width: 100%;
+    max-height: 300px;
 }
 .news-date-creator {
     display: flex;
     justify-content: space-around;
 }
-
 
 
 
