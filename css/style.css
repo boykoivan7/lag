@@ -4,6 +4,9 @@ body {
         background: #fff;
         font-family: 'Open Sans', sans-serif;
     }
+h1 {
+    text-transform: uppercase;
+}
 .hr-head, .hr-foot {
     border: 0;
     height: 1px;
@@ -153,13 +156,24 @@ li a::first-letter {
 .img-container {
     overflow: hidden;
 }
-.lastnews img:hover {
-    -webkit-transform: scale(1.2,1.2);
-    -webkit-transition-timing-function: ease-out;
-    -webkit-transition-duration: 550ms;
-    -moz-transform: scale(1.2,1.2);
-    -moz-transition-timing-function: ease-out;
-    -moz-transition-duration: 550ms;
+.eclipse {
+    background-color: #000;
+    overflow: hidden;
+}
+.eclipse img {
+    opacity: 1;
+    transition: opacity 124ms linear, transform 224ms linear;
+	width: 100%;
+	height: auto;
+    display: block; /* Убираем полосу под картинкий */
+}
+.img-container a {
+    display: inline-block;
+    width: 100%;
+}
+.img-container a:hover .eclipse img {
+    opacity: 0.5;
+    transform: scale(1.1);
 }
 .lastnews a {
     text-decoration: none;
@@ -167,20 +181,25 @@ li a::first-letter {
     font-weight: bold;
 }
 .newsdate i {
-    font-size: 25px;
+    font-size: 15px;
     color: #878787;
+    margin: 0 5px;
 }
 .newsdate p{
     color: #878787;
     margin: 0;
+    font-size: 15px;
 }
 .newsdate {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     padding-top: 10px;
+    align-items: center;
+    padding: 0;
 }
 .newsname {
-    padding: 10px 0 10px 0;
+    padding: 10px 5px;
+    text-align: left;
 }
 
 /* school and pupils history */
@@ -360,9 +379,6 @@ li a::first-letter {
     justify-content: center;
     align-items: center;
 }
-
-
-
 /* footer */
 footer {
     background-color: #333;
@@ -412,17 +428,35 @@ blockquote cite p {
 .school-museum ol {
     padding-left: 50px;
 }
-/* 3 page */
+/* 3 page open news */
 aside {
     float: right;
-    width: 30%;
+    width: calc(25% - 20px);
+    margin: 50px 0 0 0;
+}
+aside img {
+    width: 100%;
+}
+.side-news {
+    margin-bottom: 30px;
+}
+.side-news:hover {
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.newsname a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
 }
 .open-news {
-    width: 70%;
+    width: 75%;
     float: left;
 }
 .open-news h1 {
     text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 0;
 }
 .thumbnail {
     width: 100%;
@@ -433,9 +467,40 @@ aside {
 }
 .news-date-creator {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
 }
-
+.news-date-creator .newsdate {
+    padding: 0 0 10px 0;
+}
+.news-date-creator .newsdate p {
+    padding: 0;
+}
+.tags {
+    background-color: #9c2910;
+    margin: 0  0 10px 10px;
+    color: #fff;
+    padding: 2px 5px;
+}
+/* 4 page all news */
+.flex-all-news {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.news-item {
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid silver;
+}
+.news-item:hover {
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.news-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 
 /*for phones and laptops  */
@@ -450,17 +515,18 @@ aside {
         display: block;
         width: 40px;
         background-color: #9c2910;
-        border: 1px solid #fff;
+        border: 1px solid #9c2910;
         border-radius: 10px;
     }
     #btn-menu hr {
         border: 1px solid #fff;
     }
-    #btn-menu:hover hr , #btn-menu:hover {
-        border: 1px solid #000;
+    #btn-menu:hover {
+        background-color: #8a250e;
+        border: 1px solid #8a250e;
     }
     #btn-menu:active{
-        border: 3px solid #000;
+        border: 1px solid #9c2910;
     }
     #btn-menu:focus {
         outline: none;
@@ -492,12 +558,6 @@ aside {
     .lastnews, .schoolinfo, .pupilsinfo, .cooperation, .education {
         width: 70%;
     }
-    .newsdate {
-        justify-content: center;
-    }
-    .newsdate p {
-        padding-left: 10px; 
-    }
     .pupilsinfo {
         padding-top: 30px;
     }
@@ -518,6 +578,11 @@ aside {
 
 /* 3 page */
 
+
+/* 4 page all news*/
+.news-item {
+    width: 90%;
+}
    
 }
 
