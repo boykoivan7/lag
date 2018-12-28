@@ -165,7 +165,7 @@ li a::first-letter {
     transition: opacity 124ms linear, transform 224ms linear;
 	width: 100%;
 	height: auto;
-    display: block; /* Убираем полосу под картинкий */
+    display: block;
 }
 .img-container a {
     display: inline-block;
